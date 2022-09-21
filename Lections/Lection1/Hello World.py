@@ -12,7 +12,7 @@
 
 
 print('Введите число a: ')
-a = input()
+a = int(input())
 print('Введите число b: ')
-b = input()
+b = int(input())
 print(f'Сумма {a} и {b} равна {a+b}')
