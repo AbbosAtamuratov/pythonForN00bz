@@ -5,7 +5,5 @@ for i in range(-num, num+1):
     print(i, end=' ')
 
 # print('введите числа')
-
 # value = int(input())
-
 # print (list (range(-value, value+1)))
