@@ -1,11 +1,12 @@
 # Напишите программу, которая принимает вещественное число и считает сумму его цифр
 
-chislo = list(map(int, input('Введите вещественное: ').split('.')))
-
-def DigitSum (list chislo)
+def DigitSum (chislo_list):
     sum = 0
-    for i in chislo:
-        while chislo[i]==0:
-            sum=+chislo[i]%10
-            chislo[i]=chislo[i]//10
-return sum
+    for i in range(len(chislo_list)):
+        while chislo_list[i]>0:
+            sum+=chislo_list[i]%10
+            chislo_list[i]=chislo_list[i]//10
+    return sum
+
+chislo = list(map(int, input('Введите вещественное: ').split('.')))
+print(DigitSum(chislo))
