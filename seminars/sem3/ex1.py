@@ -1,8 +1,8 @@
 # Задайте список. Напишите программу, которая определит, присутствует ли в заданном списке строк некое число.
 
-text=list(map(input('Введите элементы списка чере пробел: ').split()))
-for i in text:
-    if type(text[i]) == int:
-        print('ok')
-    else:
-        print('not ok')
+text=input('Введите элементы списка чере пробел: ').split()
+num = input('Введите число: ')
+if num in text:
+    print('ok')
+else:
+    print ('not ok')
