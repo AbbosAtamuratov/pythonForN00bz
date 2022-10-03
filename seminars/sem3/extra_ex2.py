@@ -20,11 +20,18 @@
 # Формат выходных данных
 # Программа должна вывести номера зараженных холодильников через пробел. Если таких холодильников нет, ничего выводить не нужно.
 
-data = "fridges.txt"
-file=open(data,'r')
-line=1
-for line in file:
-    for i in line:
-        if 'a' in line[i]: 
+data = "C:\\Users\\МSI\\Desktop\\Python for n00bz\\seminars\\sem3\\fridges.txt"
+busted_serialNumbers=[]
+k=0
+with open(data,'r') as f:
+    for i in f:
+        if 'a' in i:
+            if 'n' in i:
+                if 't' in i:
+                    if 'o' in i:
+                        if 'n' in i:
+                            busted_serialNumbers.append(k)
+        k+=1
+    print(busted_serialNumbers)
 
 # построчный перебор со вложенными условиями на нахождение каждой последущей буквы слова anton в строке
