@@ -19,7 +19,6 @@ def Simple (list_nums):
 
 def Decompose(num):
     nums = [i for i in range (3,num+1,2)]
-    nums.insert(0,2)
     simple_nums = Simple(nums)
     result=[]
     i=0
