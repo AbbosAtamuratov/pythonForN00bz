@@ -28,4 +28,4 @@ power = int(input('Введите степень многочлена: '))
 
 path='C:\\Users\\МSI\\Desktop\\Python for n00bz\\seminars\\sem4\\HW\\Polys.txt'
 with open(path, 'w') as f:
-    f.write(GeneratePoly(power)+'\n')
+    f.write(GeneratePoly(power)+'=0')
