@@ -13,3 +13,10 @@ with open(poly2,'r') as p1:
         second=list(map(str,i.split('+')))
 
 print(first, '\n', second)
+
+def MaxPower (inp_list1, inp_list2):
+    if int(inp_list1[-1]>inp_list2[-1]):
+        return inp_list1[-1]
+    else:
+        return inp_list2[-1]
+
