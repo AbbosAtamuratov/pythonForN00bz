@@ -1,20 +1,6 @@
 # Даны два файла, в каждом из которых находится запись многочлена. 
 # Задача - сформировать файл, содержащий сумму многочленов.
 
-from copy import copy
-
-
-poly1='C:\\Users\\МSI\\Desktop\\Python for n00bz\\seminars\\sem4\\HW\\Poly1.txt'
-poly2='C:\\Users\\МSI\\Desktop\\Python for n00bz\\seminars\\sem4\\HW\\Poly2.txt'
-
-with open(poly1,'r') as p1:
-    for i in p1:    
-        first=list(map(str,i.split('+')))
-
-with open(poly2,'r') as p1:
-    for i in p1:    
-        second=list(map(str,i.split('+')))
- 
 def StripPoly (poly): # превращает многочлен в список кортежей (коэффицент, степень)
     res = []
     for i in poly:
@@ -73,8 +59,22 @@ def printPoly (inp_list):
         elif i[1] == 0:
             print(f'{i[0]}=0')
 
+poly1='C:\\Users\\МSI\\Desktop\\Python for n00bz\\seminars\\sem4\\HW\\Poly1.txt'
+poly2='C:\\Users\\МSI\\Desktop\\Python for n00bz\\seminars\\sem4\\HW\\Poly2.txt'
+
+with open(poly1,'r') as p1:
+    for i in p1:    
+        first=list(map(str,i.split('+')))
+
+with open(poly2,'r') as p1:
+    for i in p1:    
+        second=list(map(str,i.split('+')))
 
 a, b = StripPoly(first), StripPoly(second)
+printPoly (a)
+print('+')
+printPoly (b)
+print('=')
 printPoly (SumPolys(a,b))
 
 
