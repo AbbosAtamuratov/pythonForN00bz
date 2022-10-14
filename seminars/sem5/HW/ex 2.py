@@ -46,11 +46,11 @@ def RunGame_AI (ps, pm, hl, tc):
             print('Ходит ИИ...')
             if tc<=hl:
                 tc=0
-            elif 0<tc<2*hl:
-                delta = (tc-hl)//2
-                if delta==0: 
-                    delta=1
-                tc-=delta
+            elif 0<tc<2*hl+1:
+                if tc%29 == 0:
+                    tc-=1
+                else:
+                    tc-=(tc%29)
             else:
                 tc-=random.randint(1,hl+1)
         else:
