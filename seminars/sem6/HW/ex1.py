@@ -8,4 +8,4 @@ numbers = [sep_floats(i) for i in chisla]
 for i in numbers:
     i[1] = 10**(-len(i[1]))*int(i[1])
 numbers.sort(key=lambda x: x[1], reverse=True)
-print(numbers)
+print(numbers[0][1]-numbers[-1][1])
