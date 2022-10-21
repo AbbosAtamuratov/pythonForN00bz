@@ -30,7 +30,7 @@ def WritePoly (inp_list):
                 else:
                     res = res + f'+{i[0]}'
     res = res+'=0'
-    res.strip('+')
+    res=res.strip('+')
     return res
 k = int(input('Задайте натуральную степень: '))
 

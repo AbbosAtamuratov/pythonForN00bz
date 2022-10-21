@@ -5,3 +5,8 @@ text = filter(lambda x: 'абв' not in x, text)
 
 for i in text:
     print(i, end=' ')
+
+# list= "абвдлодоьбабвджлвбав"
+# print(list)
+# lis=list.replace("абв","")
+# print(lis)
