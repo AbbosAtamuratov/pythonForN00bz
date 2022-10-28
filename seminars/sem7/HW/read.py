@@ -5,21 +5,31 @@
 # "4. Добавить абонента в справочник\n"
 # "5. Сохранить справочник в текстовом формате\n"
 # "6. Закончить работу")
+
 def Help():
     print('showAll - Отобразить весь справочник')
     print('findByName - Найти абонента по фамилии')
     print('findByTel - Найти абонента по номеру телефона')
     print('addContact - Добавить абонента в справочник')
-    print('delContact - Удалить абонента из справочника')
-    print('save - Сохранить справочник в текстовом формате')
+    print('save - сохранить справочник в текстовом формате')
+    print('import - импортировать контакты из файла')
     print('quit - Закончить работу')
 
 
-def ShowALL(inp_dict):
-    for i in inp_dict:
-        print(i)
+def Show(inp_list):
+    for i in inp_list:
+        res = ''
+        res = f'{i["name"]} - '
+        res = res + f'{i["surname"]} - '
+        res = res + f'{i["tel"]}'
+        print(res)
 
 
-test = [('name', 'tel', 'coment'), ('name1', 'tel1', 'coment1')]
-test = enumerate(test, 1)
-ShowALL(test)
+def Peek(inp_list, query):
+    i = inp_list[query]
+    res = ''
+    res = f'{i["name"]} - '
+    res = res + f'{i["surname"]} - '
+    res = res + f'{i["tel"]}'
+    print(res)
+
