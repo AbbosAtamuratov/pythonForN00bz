@@ -6,7 +6,7 @@ booted = True
 book = []
 
 while booted:
-    inp_cmd = input('Введите команду или help')
+    inp_cmd = input('Введите команду или help:\n')
     if inp_cmd == 'quit':
         booted = False
     elif inp_cmd == 'help':
