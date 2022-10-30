@@ -32,3 +32,18 @@ def import_json() -> list:
         for i in f:
             items.append(json.loads(i))
     return items
+
+def export_csv (database):
+    with open('database.csv', 'w') as cf:
+        for i in database:
+            row = []
+            row.append(i["name"])
+            row.append(i["surname"])
+            row.append(i["tel"])
+            row.append(i["assignment"])
+            row.append(i["wage"])
+            add_row = csv.writer(cf)
+            add_row.writerow(row)
+
+def import_csv() -> list:
+    pass
