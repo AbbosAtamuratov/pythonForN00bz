@@ -8,12 +8,12 @@ def import_txt() -> list:
         for i in file:
             item = {"name": '', "surname": '', "tel": '', "assignment": '', "wage": ''}
             i=i.strip('\n')
-            tmp = list(map(str, i.split('-')))
             item["name"] = tmp[0]
             item["surname"] = tmp[1]
             item["tel"] = tmp[2]
             item["assignment"] = tmp[3]
             item["wage"] = tmp[4]
+            tmp = list(map(str, i.split('-')))
             items.append(item)
     return items
 
@@ -46,4 +46,16 @@ def export_csv (database):
             add_row.writerow(row)
 
 def import_csv() -> list:
-    pass
+    with open('database.csv', 'r') as cf:
+        reader = csv.reader(cf)
+        res=[]
+        for i in reader:
+            tmp = list(map(str,i[0].split('-')))
+            item = {"name": '', "surname": '', "tel": '', "assignment": '', "wage": ''}
+            item["name"] = tmp[0]
+            item["surname"] = tmp[1]
+            item["tel"] = tmp[2]
+            item["assignment"] = tmp[3]
+            item["wage"] = tmp[4]
+            res.append(item)
+        return res

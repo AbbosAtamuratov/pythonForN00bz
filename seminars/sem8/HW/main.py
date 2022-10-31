@@ -57,5 +57,7 @@ while booted:
         db = db + ie.import_json()
     elif inp_cmd == 'saveCSV':
         ie.export_csv(db)
+    elif inp_cmd == 'importCSV':
+        db = db + ie.export_csv(db)
     else:
         print('Команда не распознана. Попробуйте ещё раз... ')
