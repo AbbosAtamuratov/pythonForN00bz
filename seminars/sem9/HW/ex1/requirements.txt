@@ -1,0 +1,4 @@
+awesome-progress-bar==1.7.2
+colorama==0.4.6
+cursor==1.3.5
+emoji==2.2.0
