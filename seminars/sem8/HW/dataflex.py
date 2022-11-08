@@ -38,6 +38,6 @@ def find_assignment(inp_list, inp_assignment) -> int:
 def selection_salary (inp_list, inp_query) -> list:
     sel_sal = []
     for i in inp_list:
-        if i["wage"] == inp_query:
+        if int(i["wage"]) == int(inp_query):
             sel_sal.append(i)
     return sel_sal

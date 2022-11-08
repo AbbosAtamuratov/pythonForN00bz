@@ -60,7 +60,8 @@ while booted:
     elif inp_cmd == 'importCSV':
         db = db + ie.import_csv()
     elif inp_cmd == 'selectSal':
-       for i in df.selection_salary(db, input('Введите потолок зарплаты: ')):
-           print(i)
+       q=input('Введите потолок зарплаты: ')
+       for i in df.selection_salary(db, q):
+           print(f'{i["name"]}-{i["surname"]}-{i["tel"]}-{i["assignment"]}-{i["wage"]}')
     else:
         print('Команда не распознана. Попробуйте ещё раз... ')
