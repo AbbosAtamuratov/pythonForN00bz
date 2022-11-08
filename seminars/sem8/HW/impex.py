@@ -8,12 +8,12 @@ def import_txt() -> list:
         for i in file:
             item = {"name": '', "surname": '', "tel": '', "assignment": '', "wage": ''}
             i=i.strip('\n')
+            tmp = list(map(str, i.split('-')))
             item["name"] = tmp[0]
             item["surname"] = tmp[1]
             item["tel"] = tmp[2]
             item["assignment"] = tmp[3]
             item["wage"] = tmp[4]
-            tmp = list(map(str, i.split('-')))
             items.append(item)
     return items
 
@@ -50,12 +50,11 @@ def import_csv() -> list:
         reader = csv.reader(cf)
         res=[]
         for i in reader:
-            tmp = list(map(str,i[0].split('-')))
             item = {"name": '', "surname": '', "tel": '', "assignment": '', "wage": ''}
-            item["name"] = tmp[0]
-            item["surname"] = tmp[1]
-            item["tel"] = tmp[2]
-            item["assignment"] = tmp[3]
-            item["wage"] = tmp[4]
+            item["name"] = i[0]
+            item["surname"] = i[1]
+            item["tel"] = i[2]
+            item["assignment"] = i[3]
+            item["wage"] = i[4]
             res.append(item)
         return res

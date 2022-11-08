@@ -58,6 +58,9 @@ while booted:
     elif inp_cmd == 'saveCSV':
         ie.export_csv(db)
     elif inp_cmd == 'importCSV':
-        db = db + ie.export_csv(db)
+        db = db + ie.import_csv()
+    elif inp_cmd == 'selectSal':
+       for i in df.selection_salary(db, input('Введите потолок зарплаты: ')):
+           print(i)
     else:
         print('Команда не распознана. Попробуйте ещё раз... ')
