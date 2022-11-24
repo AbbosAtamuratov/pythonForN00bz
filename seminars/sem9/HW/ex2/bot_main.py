@@ -15,7 +15,7 @@ file.close()
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
-logFile=open(r'C:\Users\МSI\Desktop\Python for n00bz\seminars\sem9\HW\ex2\logs.txt','a')
+logFile=open(r'C:\Users\МSI\Desktop\Python for n00bz\seminars\sem9\HW\ex2\logs.txt', 'a')
 @dp.message_handler(commands=['start'])
 async def start_handler(message: types.Message):
     user_name = message.from_user.first_name
