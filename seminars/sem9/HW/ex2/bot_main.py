@@ -4,10 +4,10 @@ import logging
 from aiogram import *
 
 TOKEN = ''
-GREETINGS = 'Бонжур, {}'
+GREETINGS = 'Приветствую, {}'
 
 # достаём токен
-path = r'C:\Users\МSI\Desktop\tg token\token.txt'
+path = r'C:\Users\МSI\Desktop\tg tokens\token.txt'
 file = open(path, mode='r')
 key= file.read()
 TOKEN=key
@@ -22,7 +22,7 @@ async def start_handler(message: types.Message):
     user_id = message.from_user.id
     user_fullname = message.from_user.full_name
     log = f'{user_id} {user_fullname} {time.asctime()} '
-    logging.basicConfig(level=logging.INFO, filename='logs.txt', format= "%(asctime)s %(levelname)s %(message)s")
+    logging.basicConfig(level=logging.INFO, filename='logs.txt', format= "%(message)s %(levelname)s")
     await message.reply(GREETINGS.format(user_name))
 
 @dp.message_handler(commands=['help'])
@@ -92,6 +92,8 @@ async def help_handler(message: types.Message):
     for i in range(1,len(digits)):
         d/=digits[i]
     await message.reply(f'Частное чисел: {digits} равна {(d)}.')
+
+
 
 if __name__ == '__main__':
     executor.start_polling(dp)

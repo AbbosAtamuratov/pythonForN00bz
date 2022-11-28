@@ -3,3 +3,7 @@
 2022-11-24 16:10:43,045 INFO 393925258 Abbos Atamuratov Thu Nov 24 16:10:43 2022 
 2022-11-24 16:11:02,772 INFO Stop polling...
 2022-11-24 16:11:02,773 WARNING Goodbye!
+Stop polling... INFO
+Goodbye! WARNING
+Stop polling... INFO
+Goodbye! WARNING
